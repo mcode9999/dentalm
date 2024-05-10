@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.parallax-item h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.parallax-item:first-child {
+  background: url("head.jpg");
+  background-size: cover;
+}
+
+.parallax-item:nth-child(2) {
+  background: url("d2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+.parallax-item:nth-child(3) {
+  background: url("bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: white;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006ca0;
+  border-radius: 10px;
+}
+
+.parallax-item:nth-child(4) {
+  background: #1565c0;
+}
+.text {
+  opacity: 0;
+  animation-duration: 6s;
+  animation: revealText 1s forwards;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .parallax-item h2 {
+    font-size: 1.5rem;
+  }
+}
